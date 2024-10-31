@@ -12,7 +12,10 @@
             <a href="/" class="home-button"><img src="/assets/images/navbarlogo.svg" class="navbar-logo" aria-hidden="true"><span class="home-link">Monochronix</span></a>
             <a href="/login" class="login-link"><span class="login-link-text">Log In</span></a>
             <a href="/login" class="signup-link"><img src="/assets/icons/user-plus.svg" class="user-plus-icon"><span class="navbar-signup-text">Sign Up</span></a>
-            <button id="expandNav" aria-label="Open Menu"><img src="/assets/icons/menu.svg" class="navbar-menu-icon" id="navbarExpandIcon"></button>
+            <div class="menu-btn" role="button" tabindex="0" aria-label="Expand" aria-pressed="false">
+                <div class="menu-btn-icon">
+                </div>
+            </div>
         </div>
         <div class="mobile-navbar-expanded-content" id="mobileNavbarExpandedContent">
             <div class="mobile-navbar-expanded-links-left">
@@ -45,5 +48,6 @@
     </nav>
     <script src="/navbarExpand.js"></script>
     <script src="/navbarMask.js"></script>
+    <script src="/menuIconAnimation.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ body {
     margin: auto;
     left: 0;
     right: 0;
-    margin-top: 35px;
+    top: 25px;
     transition: height 0.1s ease;
 }
 
@@ -83,7 +83,6 @@ body {
     font-weight: 600;
     font-size: 14px;
     z-index: 2;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
     top: -1px;
 }
 
@@ -119,14 +118,12 @@ body {
     z-index: 2;
     font-size: 14px;
     position: relative;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
     top: -1px;
     left: 4px;
 }
 
 .user-plus-icon {
     width: 14px;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
     z-index: 3;
     position: relative;
     right: 2px;
@@ -278,11 +275,32 @@ body {
 }
 
 @media screen and (max-width: 420px) {
-    .login-link {
+    .user-plus-icon {
         display: none;
     }
+    .signup-link::after {
+        width: 65px;
+    }
     .signup-link {
-        display: none;
+        right: 54px;
+    }
+    .navbar-signup-text {
+        left: 0;
+    }
+    .login-link {
+        right: 130px;
+    }
+    .login-link::after {
+        width: 55px;
+    }
+    .menu-btn {
+        right: 15px;
+    }
+    .navbar-logo {
+        left: 15px;
+    }
+    .home-link {
+        left: 50px;
     }
     .mobile-navbar-expanded-link {
         font-size: 14px;
@@ -297,4 +315,22 @@ body {
         height: 25px;
     }
 
+}
+
+@media screen and (max-width: 370px) {
+    .login-link {
+        display: none;
+    }
+    .signup-link {
+        display: none;
+    }
+    .menu-btn {
+        right: 20px;
+    }
+    .navbar-logo {
+        left: 20px;
+    }
+    .home-link {
+        left: 55px;
+    }
 }

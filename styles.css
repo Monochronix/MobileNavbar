@@ -26,7 +26,7 @@ body {
     left: 0;
     right: 0;
     top: 25px;
-    transition: height 250ms ease-in-out;
+    transition: height 666ms ease-in-out;
 }
 
 .navbar-logo {
@@ -197,14 +197,12 @@ body {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
 }
 
 .menu-btn-icon {
     width: 18px;
     height: 1.5px;
     background: #fff;
-    transition: all 0.4s ease-in-out;
 }
 
 .menu-btn-icon::before,
@@ -214,7 +212,6 @@ body {
     width: 18px;
     height: 1.5px;
     background: #fff;
-    transition: all 0.4s ease-in-out;
 }
 
 .menu-btn-icon::before {
@@ -225,58 +222,19 @@ body {
     transform: translateY(5px);
 }
 
-@-webkit-keyframes menu-icon-open-bottom {
-    0% {
-        -webkit-transform: translateY(-5px);
-        transform: translateY(-5px);
-    }
-    30% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-    40% {
-        -webkit-transform: translateY(0);
-        -webkit-transform: rotate(0);
-        transform: translateY(0) rotate(0);
-    }
-    100% {
-        -webkit-transform: rotate(225deg);
-        transform: rotate(225deg);
-    }
-}
-
 @keyframes menu-icon-open-bottom {
     0% {
         transform: translateY(-5px);
     }
-    30% {
+    20% {
         transform: translateY(0);
     }
-    40% {
+    25% {
         transform: translateY(0);
         transform: rotate(0);
     }
     100% {
         transform: rotate(225deg);
-    }
-}
-
-@-webkit-keyframes menu-icon-close-bottom {
-    0% {
-        -webkit-transform: rotate(225deg);
-        transform: rotate(225deg);
-    }
-    30% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    40% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    100% {
-        -webkit-transform: translateY(5px);
-        transform: translateY(5px);
     }
 }
 
@@ -284,34 +242,14 @@ body {
     0% {
         transform: rotate(225deg);
     }
-    30% {
+    75% {
         transform: rotate(0);
     }
-    40% {
+    80% {
         transform: rotate(0);
     }
     100% {
         transform: translateY(5px);
-    }
-}
-
-@-webkit-keyframes menu-icon-open-top {
-    0% {
-        -webkit-transform: translateY(5px);
-        transform: translateY(5px);
-    }
-    30% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-    40% {
-        -webkit-transform: translateY(0);
-        -webkit-transform: rotate(0);
-        transform: translateY(0) rotate(0);
-    }
-    100% {
-        -webkit-transform: rotate(135deg);
-        transform: rotate(135deg);
     }
 }
 
@@ -319,34 +257,15 @@ body {
     0% {
         transform: translateY(5px);
     }
-    30% {
+    20% {
         transform: translateY(0);
     }
-    40% {
+    25% {
         transform: translateY(0);
         transform: rotate(0);
     }
     100% {
         transform: rotate(135deg);
-    }
-}
-
-@-webkit-keyframes menu-icon-close-top {
-    0% {
-        -webkit-transform: rotate(135deg);
-        transform: rotate(135deg);
-    }
-    30% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    40% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-    100% {
-        -webkit-transform: translateY(-5px);
-        transform: translateY(-5px);
     }
 }
 
@@ -354,10 +273,10 @@ body {
     0% {
         transform: rotate(135deg);
     }
-    30% {
+    75% {
         transform: rotate(0);
     }
-    40% {
+    80% {
         transform: rotate(0);
     }
     100% {
@@ -365,48 +284,18 @@ body {
     }
 }
 
-@-webkit-keyframes menu-icon-open-middle {
-    0% {
-        background: transparent;
-    }
-    30% {
-        background: transparent;
-    }
-    40% {
-        background: transparent;
-    }
-    100% {
-        background: transparent;
-    }
-}
-
 @keyframes menu-icon-open-middle {
     0% {
         transform: translateY(0);
     }
-    30% {
+    20% {
         transform: translateY(0);
     }
-    40% {
+    25% {
         background: transparent;
     }
     100% {
         background: transparent;
-    }
-}
-
-@-webkit-keyframes menu-icon-close-middle {
-    0% {
-        background: transparent;
-    }
-    30% {
-        background: transparent;
-    }
-    40% {
-        background: #FFF;
-    }
-    100% {
-        background: #FFF;
     }
 }
 
@@ -414,10 +303,10 @@ body {
     0% {
         background: transparent;
     }
-    30% {
+    75% {
         background: transparent;
     }
-    40% {
+    80% {
         background: #FFF;
     }
     100% {
@@ -427,27 +316,27 @@ body {
 
 
 .menu-btn.open .menu-btn-icon::before {
-    animation: menu-icon-open-top 0.4s forwards;
+    animation: menu-icon-open-top 666ms forwards;
 }
 
 .menu-btn.open .menu-btn-icon::after {
-    animation: menu-icon-open-bottom 0.4s forwards;
+    animation: menu-icon-open-bottom 666ms forwards;
 }
 
 .menu-btn.open .menu-btn-icon {
-    animation: menu-icon-open-middle 0.4s forwards;
+    animation: menu-icon-open-middle 666ms forwards;
 }
 
-.menu-btn:not(.open) .menu-btn-icon::before {
-    animation: menu-icon-close-top 0.4s forwards;
+.menu-btn:not(.open):not(.firstLoad) .menu-btn-icon::before {
+    animation: menu-icon-close-top 666ms forwards;
 }
 
-.menu-btn:not(.open) .menu-btn-icon::after {
-    animation: menu-icon-close-bottom 0.4s forwards;
+.menu-btn:not(.open):not(.firstLoad) .menu-btn-icon::after {
+    animation: menu-icon-close-bottom 666ms forwards;
 }
 
-.menu-btn:not(.open) .menu-btn-icon  {
-    animation: menu-icon-close-middle 0.4s forwards;
+.menu-btn:not(.open):not(.firstLoad) .menu-btn-icon  {
+    animation: menu-icon-close-middle 666ms forwards;
 }
 
 .expandedNav {
@@ -465,12 +354,12 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    top: 90px;
+    top: 95px;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(16,1fr);
     clip-path: inset(0 0 290px 0);
-    transition: clip-path 250ms ease-in-out;
+    transition: clip-path 666ms ease-in-out;
 }
 
 .mobile-navbar-expanded-content.active {

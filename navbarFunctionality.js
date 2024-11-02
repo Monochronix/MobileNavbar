@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Functionality of hiding navbar on scroll
     let lastScrollY = window.scrollY;
-    
     window.addEventListener('scroll', () => {
         if (window.scrollY > lastScrollY) {
             navbarSection.style.top = '-130px';

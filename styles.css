@@ -11,6 +11,10 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+nav {
+    z-index: 1000;
+}
+
 .navbar-section {
     background-color: #0e100f;
     position: fixed;
@@ -78,9 +82,9 @@ body {
     height: 32px;
     top: 50%;
     left: 50%;
+    z-index: 1;
     transform: translate(-50%, -50%);
     transition: box-shadow 0.3s ease;
-    z-index: 0;
     border-radius: 10px;
     box-shadow: 
     0px 0px 0px 2px rgba(0, 0, 0, 0.5), 
@@ -143,7 +147,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: 1;
     border-radius: 10px;
     box-shadow: 
     0px 0px 0px 2px rgba(0, 0, 0, 0.5), 
@@ -193,10 +197,9 @@ body {
 
 .user-plus-icon {
     width: 14px;
-    z-index: 3;
+    z-index: 2;
     position: relative;
     right: 2px;
-    
 }
 
 .menu-btn {
@@ -209,6 +212,7 @@ body {
     width: 20px;
     height: 20px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .menu-btn-icon {
@@ -372,6 +376,7 @@ body {
     grid-template-rows: repeat(16,1fr);
     clip-path: inset(0 0 100% 0);
     transition: clip-path 666ms ease-in-out;
+    z-index: 1;
 }
 
 .mobile-navbar-expanded-content.active {
@@ -402,7 +407,6 @@ body {
 .mobile-navbar-expanded-seperator {
     background: transparent;
     grid-area: 13 / 1 / 14 / 19;
-    z-index: 0;
     position: relative;
 }
 
@@ -413,7 +417,6 @@ body {
     color: #FFF;
     background: #FFF;
     border: none;
-    z-index: 0; 
     position: relative;
 }
 

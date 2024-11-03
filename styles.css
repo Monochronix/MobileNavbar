@@ -7,10 +7,7 @@ body {
     background-color: #0e100f;
 }
 
-* {
-    -webkit-tap-highlight-color: transparent;
-}
-
+/*Put all the navbar elements on top of everything else*/
 nav {
     z-index: 1000;
 }
@@ -21,6 +18,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    /*Transition will animate the section disappearing upwards*/
     transition: top 1s;
     border-bottom: 4px solid #F8F6D8;
     height: 120px;
@@ -29,6 +27,7 @@ nav {
 .navbar {
     background-color: #111314;
     border-radius: 20px;
+    /*Box shadows give a sense of depth and lighting*/
     box-shadow: inset 0 1.5px 2px 0 rgba(255,255,255,0.15),
         inset 0 -5px 5px 0 rgba(5, 5, 5, 0.8);
     width: 90%;
@@ -42,7 +41,14 @@ nav {
     left: 0;
     right: 0;
     top: 25px;
+    /*Transition for expansion*/
     transition: height 666ms ease-in-out;
+}
+
+/*Class applied to navbar when menu button is pressed*/
+.expandedNav {
+    height: 370px;
+    overflow: hidden;
 }
 
 .navbar-logo {
@@ -93,34 +99,6 @@ nav {
     inset 0px 1px 1px 0px rgb(65, 65, 65);
 }
 
-.login-link:hover::after {
-    animation: login-pulse 1.5s infinite cubic-bezier(0.5, 0, 0.5, 1);
-}
-
-@keyframes login-pulse {
-    0% {
-        box-shadow: 
-        0px 0px 0px 2px rgba(0, 0, 0, 0.5), 
-        0px 0px 14px 0px rgba(88, 88, 88, 0.1), 
-        inset 0px -1px 1px 0px rgba(0, 0, 0, 0.3), 
-        inset 0px 1px 1px 0px rgb(65, 65, 65);
-    }
-    50% {
-        box-shadow: 
-        0px 0px 0px 2px rgba(0, 0, 0, 0.5), 
-        0px 0px 16px 0px rgba(92, 92, 92, 0.3), 
-        inset 0px -1px 1px 0px rgba(0, 0, 0, 0.3), 
-        inset 0px 1px 1px 0px rgb(65, 65, 65);
-    }
-    100% {
-        box-shadow: 
-        0px 0px 0px 2px rgba(0, 0, 0, 0.5), 
-        0px 0px 14px 0px rgba(88, 88, 88, 0.1), 
-        inset 0px -1px 1px 0px rgba(0, 0, 0, 0.3), 
-        inset 0px 1px 1px 0px rgb(65, 65, 65);
-    }
-}
-
 .login-link-text {
     position: relative;
     font-family: "Geist", sans-serif;
@@ -156,34 +134,6 @@ nav {
     inset 0px 1px 1px 0px rgb(255, 255, 255);
 }
 
-.signup-link:hover::after {
-    animation: signup-pulse 1.5s infinite cubic-bezier(0.5, 0, 0.5, 1);
-}
-
-@keyframes signup-pulse {
-    0% {
-        box-shadow: 
-        0px 0px 0px 2px rgba(0, 0, 0, 0.5), 
-        0px 0px 14px 0px rgba(192, 192, 192, 0.1), 
-        inset 0px -1px 1px 0px rgba(0, 0, 0, 0.3), 
-        inset 0px 1px 1px 0px rgb(255, 255, 255);
-    }
-    50% {
-        box-shadow: 
-        0px 0px 0px 2px rgba(0, 0, 0, 0.5), 
-        0px 0px 14.5px 0px rgba(196, 196, 196, 0.3), 
-        inset 0px -1px 1px 0px rgba(0, 0, 0, 0.3), 
-        inset 0px 1px 1px 0px rgb(255, 255, 255);
-    }
-    100% {
-        box-shadow: 
-        0px 0px 0px 2px rgba(0, 0, 0, 0.5), 
-        0px 0px 14px 0px rgba(192, 192, 192, 0.1), 
-        inset 0px -1px 1px 0px rgba(0, 0, 0, 0.3), 
-        inset 0px 1px 1px 0px rgb(255, 255, 255);
-    }
-}
-
 .navbar-signup-text {
     font-family: "Geist", sans-serif;
     font-weight: 600;
@@ -215,12 +165,14 @@ nav {
     z-index: 1;
 }
 
+/*Middle Line*/
 .menu-btn-icon {
     width: 18px;
     height: 1.5px;
     background: #fff;
 }
 
+/*Before is the top line, after is the one on the bottom.*/
 .menu-btn-icon::before,
 .menu-btn-icon::after {
     content: '';
@@ -238,6 +190,7 @@ nav {
     transform: translateY(5px);
 }
 
+/*Open and close keyframes for each of the lines of the hamburger menu*/
 @keyframes menu-icon-open-bottom {
     0% {
         -webkit-transform: translateY(-5px);
@@ -351,47 +304,31 @@ nav {
 }
 
 .menu-btn.open .menu-btn-icon::before {
-    animation-name: menu-icon-open-top;
-    animation-duration: 666ms;
-    animation-fill-mode: forwards;
+    animation: menu-icon-open-top 666ms forwards;
 }
 
 .menu-btn.open .menu-btn-icon::after {
-    animation-name: menu-icon-open-bottom;
-    animation-duration: 666ms;
-    animation-fill-mode: forwards;
+    animation: menu-icon-open-bottom 666ms forwards;
 }
 
 .menu-btn.open .menu-btn-icon {
-    animation-name: menu-icon-open-middle;
-    animation-duration: 666ms;
-    animation-fill-mode: forwards;
+    animation: menu-icon-open-middle 666ms forwards;
 }
 
 .menu-btn:not(.open):not(.firstLoad) .menu-btn-icon::before {
-    animation-name: menu-icon-close-top;
-    animation-duration: 666ms;
-    animation-fill-mode: forwards;
+    animation: menu-icon-close-top 666ms forwards;
 }
 
 .menu-btn:not(.open):not(.firstLoad) .menu-btn-icon::after {
-    animation-name: menu-icon-close-bottom;
-    animation-duration: 666ms;
-    animation-fill-mode: forwards;
+    animation: menu-icon-close-bottom 666ms forwards;
 }
 
-.menu-btn:not(.open):not(.firstLoad) .menu-btn-icon  {
-    animation-name: menu-icon-close-middle;
-    animation-duration: 666ms;
-    animation-fill-mode: forwards;
+.menu-btn:not(.open):not(.firstLoad) .menu-btn-icon {
+    animation: menu-icon-close-middle 666ms forwards;
 }
 
-.expandedNav {
-    height: 370px;
-    overflow: hidden;
-}
-
-.mobile-navbar-expanded-content {
+/*Defines container for the content revealed when the component is expanded.*/
+.navbar-expanded-content {
     background: transparent;
     max-height: 390px;
     overflow: hidden;
@@ -405,16 +342,18 @@ nav {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(16,1fr);
+    /*This clip path makes only the bottom edge clipped*/
     clip-path: inset(0 0 100% 0);
     transition: clip-path 666ms ease-in-out;
     z-index: 1;
 }
 
-.mobile-navbar-expanded-content.active {
+.navbar-expanded-content.active {
+    /*When active, the clip path expands so that the bottom is no longer clipped.*/
     clip-path: inset(0 0 0 0);
 }
 
-.mobile-navbar-expanded-link {
+.navbar-expanded-link {
     font-family: "Geist", sans-serif;
     font-weight: 600;
     text-decoration: none;
@@ -425,23 +364,23 @@ nav {
     cursor: pointer;
 }
 
-.mobile-navbar-expanded-links-left {
+.navbar-expanded-links-left {
     background: transparent;
     grid-area: 1 / 2 / 13 / 10;
 }
 
-.mobile-navbar-expanded-links-right {
+.navbar-expanded-links-right {
     background: transparent;
     grid-area: 1 / 10 / 13 / 18;
 }
 
-.mobile-navbar-expanded-seperator {
+.navbar-expanded-seperator {
     background: transparent;
     grid-area: 13 / 1 / 14 / 19;
     position: relative;
 }
 
-.mobile-navbar-expanded-line {
+.navbar-expanded-line {
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 90%);
     height: 2px;
@@ -475,12 +414,7 @@ nav {
     height: 30px;
 }
 
-@media screen and (min-width: 471px) {
-    .mobile-navbar-expanded-content {
-        top: 87px;
-    }
-}
-
+/*The buttons will be closer together if the screen width is below 470px*/
 @media screen and (max-width: 470px) {
     .signup-link {
         right: 60px;
@@ -490,35 +424,49 @@ nav {
     }
 }
 
+
 @media screen and (max-width: 420px) {
+    /*The icon on the signup button disappears*/
     .user-plus-icon {
         display: none;
     }
+    /*Smaller login/signup buttons*/
     .signup-link::after {
         width: 65px;
-    }
-    .signup-link {
-        right: 54px;
-    }
-    .navbar-signup-text {
-        left: 0;
-    }
-    .login-link {
-        right: 130px;
     }
     .login-link::after {
         width: 55px;
     }
+    .login-link::after {
+        height: 30px;
+    }
+    .signup-link::after {
+        height: 30px;
+    }
+    /*Move login/signup buttons right to make space*/
+    .signup-link {
+        right: 54px;
+    }
+    .login-link {
+        right: 130px;
+    }
+    /*Put the text back to its horizontal center because the icon disappeared*/
+    .navbar-signup-text {
+        left: 0;
+    }
+    /*Move hamburger button right*/
     .menu-btn {
         right: 15px;
     }
+    /*Move the home link and the logo left*/
     .navbar-logo {
         left: 15px;
     }
     .home-link {
         left: 50px;
     }
-    .mobile-navbar-expanded-link {
+    /*The elements of the expanded navbar should be smaller*/
+    .navbar-expanded-link {
         font-size: 14px;
     }
     .youtube-link {
@@ -530,31 +478,22 @@ nav {
     .linkedin-link {
         height: 25px;
     }
-    .mobile-navbar-expanded-content {
-        top: 90px;
-    }
-    .expandedNav {
-        height: 370px;
-    }
+    /*Make the home link smaller*/
     .home-link {
         font-size: 14px;
         top: 26px;
     }
-    .login-link::after {
-        height: 30px;
-    }
-    .signup-link::after {
-        height: 30px;
-    }
 }
 
 @media screen and (max-width: 370px) {
+    /*Login/signup buttons should disappear at this screen width*/
     .login-link {
         display: none;
     }
     .signup-link {
         display: none;
     }
+    /*We have more empty space, so move the hamburger button 5px left and the home link 5px right*/
     .menu-btn {
         right: 20px;
     }

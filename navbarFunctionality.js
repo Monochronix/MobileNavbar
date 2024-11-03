@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const expandNav = document.querySelector('.menu-btn');
     const navbar = document.querySelector('.navbar');
-    const mobileNavbarContent = document.querySelector('.mobile-navbar-expanded-content');
+    const navbarContent = document.querySelector('.navbar-expanded-content');
     const navbarSection = document.querySelector('.navbar-section');
 
     expandNav.classList.add('firstLoad');
@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (navbar) {
             navbar.classList.toggle('expandedNav');
         }
-        if (mobileNavbarContent) {
-            mobileNavbarContent.classList.toggle('active');
+        if (navbarContent) {
+            navbarContent.classList.toggle('active');
         }
         expandNav.setAttribute('aria-expanded', expandNav.classList.contains('active'));
     };

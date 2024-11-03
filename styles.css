@@ -332,27 +332,39 @@ nav {
 
 
 .menu-btn.open .menu-btn-icon::before {
-    animation: menu-icon-open-top 666ms forwards;
+    animation-name: menu-icon-open-top;
+    animation-duration: 666ms;
+    animation-fill-mode: forwards;
 }
 
 .menu-btn.open .menu-btn-icon::after {
-    animation: menu-icon-open-bottom 666ms forwards;
+    animation-name: menu-icon-open-bottom;
+    animation-duration: 666ms;
+    animation-fill-mode: forwards;
 }
 
 .menu-btn.open .menu-btn-icon {
-    animation: menu-icon-open-middle 666ms forwards;
+    animation-name: menu-icon-open-middle;
+    animation-duration: 666ms;
+    animation-fill-mode: forwards;
 }
 
 .menu-btn:not(.open):not(.firstLoad) .menu-btn-icon::before {
-    animation: menu-icon-close-top 666ms forwards;
+    animation-name: menu-icon-close-top;
+    animation-duration: 666ms;
+    animation-fill-mode: forwards;
 }
 
 .menu-btn:not(.open):not(.firstLoad) .menu-btn-icon::after {
-    animation: menu-icon-close-bottom 666ms forwards;
+    animation-name: menu-icon-close-bottom;
+    animation-duration: 666ms;
+    animation-fill-mode: forwards;
 }
 
 .menu-btn:not(.open):not(.firstLoad) .menu-btn-icon  {
-    animation: menu-icon-close-middle 666ms forwards;
+    animation-name: menu-icon-close-middle;
+    animation-duration: 666ms;
+    animation-fill-mode: forwards;
 }
 
 .expandedNav {

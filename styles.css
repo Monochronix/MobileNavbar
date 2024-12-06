@@ -93,7 +93,6 @@ nav {
   transition: box-shadow 0.3s ease;
   border-radius: 10px;
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.5),
-    0px 0px 14px 0px rgba(88, 88, 88, 0.1),
     inset 0px -1px 1px 0px rgba(0, 0, 0, 0.3),
     inset 0px 1px 1px 0px rgb(65, 65, 65);
 }
@@ -127,7 +126,6 @@ nav {
   z-index: 1;
   border-radius: 10px;
   box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.5),
-    0px 0px 14px 0px rgba(255, 255, 255, 0.19),
     inset 0px -1px 1px 0px rgba(0, 0, 0, 0.4),
     inset 0px 1px 1px 0px rgb(255, 255, 255);
 }
@@ -166,7 +164,8 @@ nav {
 /* Middle Line */
 .menu-btn-icon {
   width: 18px;
-  height: 1.5px;
+  height: 2px;
+  border-radius: 1px;
   background: #fff;
 }
 
@@ -176,7 +175,8 @@ nav {
   content: "";
   position: absolute;
   width: 18px;
-  height: 1.5px;
+  height: 2px;
+  border-radius: 1px;
   background: #fff;
 }
 
@@ -194,16 +194,19 @@ nav {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
   }
+
   20% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   25% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   100% {
     -webkit-transform: rotate(225deg);
     transform: rotate(225deg);
@@ -215,14 +218,17 @@ nav {
     -webkit-transform: rotate(225deg);
     transform: rotate(225deg);
   }
+
   75% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   80% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   100% {
     -webkit-transform: translateY(5px);
     transform: translateY(5px);
@@ -234,16 +240,19 @@ nav {
     -webkit-transform: translateY(5px);
     transform: translateY(5px);
   }
+
   20% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   25% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   100% {
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
@@ -255,14 +264,17 @@ nav {
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
+
   75% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   80% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
   }
+
   100% {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
@@ -274,13 +286,16 @@ nav {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   20% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   25% {
     background: transparent;
   }
+
   100% {
     background: transparent;
   }
@@ -290,12 +305,15 @@ nav {
   0% {
     background: transparent;
   }
+
   75% {
     background: transparent;
   }
+
   80% {
     background: #fff;
   }
+
   100% {
     background: #fff;
   }
@@ -379,18 +397,14 @@ nav {
 }
 
 .navbar-expanded-line {
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 10%,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 0) 90%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 10%,
-    rgba(0, 0, 0, 1) 50%,
-    rgba(0, 0, 0, 0) 90%
-  );
+  mask-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 90%);
+  -webkit-mask-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 90%);
   height: 2px;
   color: #fff;
   background: #fff;
@@ -427,64 +441,81 @@ nav {
   .signup-link {
     right: 60px;
   }
+
   .login-link {
     right: 155px;
   }
 }
 
 @media screen and (max-width: 420px) {
+
   /* The icon on the signup button disappears */
   .user-plus-icon {
     display: none;
   }
+
   /* Smaller login/signup buttons */
   .signup-link::after {
     width: 65px;
   }
+
   .login-link::after {
     width: 55px;
   }
+
   .login-link::after {
     height: 30px;
   }
+
   .signup-link::after {
     height: 30px;
   }
+
   /* Move login/signup buttons right to make space */
   .signup-link {
     right: 54px;
   }
+
   .login-link {
     right: 130px;
   }
+
   /* Put the text back to its horizontal center because the icon disappeared */
   .navbar-signup-text {
     left: 0;
   }
+
   /* Move hamburger button right */
   .menu-btn {
     right: 15px;
   }
+
   /* Move the home link and the logo left */
   .navbar-logo {
     left: 15px;
   }
+
   .home-link {
     left: 50px;
   }
+
   /* The elements of the expanded navbar should be smaller */
   .navbar-expanded-link {
     font-size: 14px;
   }
+
   .youtube-link {
     height: 25px;
   }
+
   .instagram-link {
     height: 25px;
   }
+
   .linkedin-link {
     height: 25px;
   }
+
   /* Make the home link smaller */
   .home-link {
     font-size: 14px;
@@ -493,20 +524,25 @@ nav {
 }
 
 @media screen and (max-width: 370px) {
+
   /* Login/signup buttons should disappear at this screen width */
   .login-link {
     display: none;
   }
+
   .signup-link {
     display: none;
   }
+
   /* We have more empty space, so move the hamburger button 5px left and the home link 5px right */
   .menu-btn {
     right: 20px;
   }
+
   .navbar-logo {
     left: 20px;
   }
+
   .home-link {
     left: 55px;
   }

@@ -51,10 +51,10 @@ nav {
 }
 
 .navbar-logo {
-  height: 25px;
+  height: 30px;
   position: absolute;
   left: 20px;
-  top: 22.5px;
+  top: 20px;
 }
 
 .home-button {
@@ -65,11 +65,11 @@ nav {
   font-family: "Geist", sans-serif;
   text-decoration: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   position: absolute;
-  left: 57px;
-  top: 24px;
+  left: 60px;
+  top: 23px;
 }
 
 .login-link {
@@ -326,17 +326,17 @@ nav {
 }
 
 /* The buttons will be closer together if the screen width is below 470px */
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 500px) {
   .signup-link {
     right: 60px;
   }
 
   .login-link {
-    right: 155px;
+    right: 170px;
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 480px) {
 
   /* The icon on the signup button disappears */
   .user-plus-icon {
@@ -345,19 +345,19 @@ nav {
 
   /* Smaller login/signup buttons */
   .signup-link::after {
-    width: 65px;
+    width: 70px;
   }
 
   .login-link::after {
-    width: 55px;
+    width: 60px;
   }
 
   .login-link::after {
-    height: 30px;
+    height: 35px;
   }
 
   .signup-link::after {
-    height: 30px;
+    height: 35px;
   }
 
   /* Move login/signup buttons right to make space */
@@ -366,12 +366,19 @@ nav {
   }
 
   .login-link {
-    right: 130px;
+    right: 135px;
   }
 
   /* Put the text back to its horizontal center because the icon disappeared */
   .navbar-signup-text {
     left: 0;
+    /*Make font smaller*/
+    font-size: 15px;
+  }
+
+  /*Smaller font on login*/
+  .login-link-text {
+    font-size: 15px;
   }
 
   /* Move hamburger button right */
@@ -382,10 +389,6 @@ nav {
   /* Move the home link and the logo left */
   .navbar-logo {
     left: 15px;
-  }
-
-  .home-link {
-    left: 50px;
   }
 
   /* The elements of the expanded navbar should be smaller */
@@ -407,12 +410,13 @@ nav {
 
   /* Make the home link smaller */
   .home-link {
-    font-size: 14px;
-    top: 26px;
+    font-size: 18px;
+    top: 23px;
+    left: 55px;
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 430px) {
 
   /* Login/signup buttons should disappear at this screen width */
   .login-link {
@@ -433,6 +437,6 @@ nav {
   }
 
   .home-link {
-    left: 55px;
+    left: 65px;
   }
 }

@@ -27,7 +27,7 @@ nav {
 
 .navbar {
   background-color: #080909;
-  border: 1px solid #1c1d1d;
+  border: 1px solid #282929;
   border-radius: 20px;
   width: 90%;
   max-width: 550px;
@@ -171,7 +171,7 @@ nav {
   height: 2px;
   background: #FFF;
   position: relative;
-  transition: background 150ms ease;
+  transition: background 240ms ease;
 }
 
 /* Before is the top line, after is the one on the bottom. */
@@ -182,7 +182,7 @@ nav {
   width: 18px;
   height: 2px;
   background: #fff;
-  transition: transform 150ms ease;
+  transition: transform 240ms ease;
 }
 
 .menu-btn-icon::before {
@@ -249,7 +249,7 @@ nav {
       transparent 1px,
       transparent 35px);
   mask-image: radial-gradient(ellipse 110% 90%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%);
-  -webkit-mask-image: radial-gradient(ellipse 110% 90%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%);
+  -webkit-mask-image: radial-gradient(ellipse 110% 90%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%);
   pointer-events: none;
 }
 
